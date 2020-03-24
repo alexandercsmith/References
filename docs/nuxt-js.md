@@ -35,3 +35,7 @@ $ npm run generate
 <!-- Link with `params` -->
 <nuxt-link :to="{ params: { one: true } }">Link</nuxt-link>
 ```
+
+## Pages
+
+## Configuration
