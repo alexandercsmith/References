@@ -2,7 +2,12 @@
 
 [Element UI Documentation](https://element.eleme.io/#/en-US)
 
-* 
+* NavMenu
+* Tabs
+* Breadcrumb
+* PageHeader
+* Dropdown
+* Steps
 
 ---
 
