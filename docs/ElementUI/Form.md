@@ -821,18 +821,64 @@ export default {
 
 [Element UI - Slider](https://element.eleme.io/#/en-US/component/slider)
 
-Usage: `<el->`
+Usage: `<el-slider>`
 
 ```html
 <template>
+  <el-slider v-model="value1"></el-slider>
+
+  <!-- Formatted Value -->
+  <el-slider
+    v-model="value2"
+    :format-tooltip="formatTooltip">
+  </el-slider>
+
+  <!-- Step Increments -->
+  <el-slider
+    v-model="value3"
+    :step="10"
+    show-stops>
+  </el-slider>
+
+  <!-- Integrate Input -->
+  <el-slider
+    v-model="value4"
+    show-input>
+  </el-slider>
+
+  <!-- Range -->
+  <!-- Binding Value: Array(2) `[1,2]` -->
+  <el-slider
+    v-model="value5"
+    range
+    show-stops
+    :max="10">
+  </el-slider>
+
+  <!-- Vertical -->
+  <el-slider
+    v-model="value6"
+    vertical
+    height="200px">
+  </el-slider>
 </template>
 
 <script>
 export default {
   data () {
     return {
-
+      value1: 0,
+      value2: 50,
+      value3: 0,
+      value4: 0,
+      value5: [2, 8],
+      value6: 0
     };
+  },
+  methods: {
+    formatTooltip(val) {
+      return val / 100;
+    }
   }
 }
 </script>
@@ -840,15 +886,33 @@ export default {
 
 ### Slider Attributes
 
-| Attribute | Type | Default | Values | Description |
-| --------- |:----:|:-------:| ------ | ----------- |
-|
+| Attribute             | Type            | Default | Values                  | Description                     |
+| --------------------- |:---------------:|:-------:| ----------------------- | ------------------------------- |
+| `value/v-model`       | Number          | 0       | -                       | Binding Value                   |
+| `min`                 | Number          | 0       | -                       | Minimum Value                   |
+| `max`                 | Number          | 100     | -                       | Maximum Value                   |
+| `disabled`            | Boolean         | false   | -                       | Slider Disabled                 |
+| `step`                | Number          | 1       | -                       | Step Size                       |
+| `show-input`          | Boolean         | false   | -                       | Display Input Box               |
+| `show-input-controls` | Boolean         | true    | -                       | Display Control Buttons         |
+| `input-size`          | String          | -       | large/medium/small/mini | Input Box Size                  |
+| `show-stops`          | Boolean         | false   | -                       | Display Breakpoints             |
+| `show-tooltip`        | Boolean         | true    | -                       | Display Tooltip Value           |
+| `format-tooltip`      | Function(value) | -       | -                       | Display Formatted Tooltip Value |
+| `range`               | Boolean         | false   | -                       | Select Range                    |
+| `vertical`            | Boolean         | false   | -                       | Vertical Slider                 |
+| `height`              | String          | -       | -                       | Vertical Slider Height          |
+| `label`               | String          | -       | -                       | Screen Reader Label             |
+| `debounce`            | Number          | 300     | -                       | Debounce Delay                  |
+| `tooltip-class`       | String          | -       | -                       | Custom Class Name               |
+| `marks`               | Object          | -       | -                       | Type of Key must be Number      |
 
 ### Slider Events
 
-| Event Name | Parameters | Description |
-| ---------- | ---------- | ----------- |
-|
+| Event Name | Parameters         | Description                 |
+| ---------- | ------------------ | --------------------------- |
+| `change`   | Value after Change | Triggers when Value Changes |
+| `input`    | Value after Change | Triggers when Data Changes  |
 
 ---
 
@@ -856,17 +920,50 @@ export default {
 
 [Element UI - TimePicker](https://element.eleme.io/#/en-US/component/time-picker)
 
-Usage: `<el->`
+Usage: `<el-time-select>`
 
 ```html
 <template>
+  <el-time-select
+    v-model="value1"
+    :picker-options="{
+      start: '08:30',
+      step: '00:15',
+      end: '18:30'
+    }"
+    placeholder="Select Time...">
+  </el-time-select>
+
+  <!-- Fixed Time Range -->
+  <!-- `endTime` updated after `startTime` changed -->
+  <el-time-select
+    placeholder="Start time..."
+    v-model="startTime"
+    :picker-options="{
+      start: '08:30',
+      step: '00:15',
+      end: '18:30'
+    }">
+  </el-time-select>
+  <el-time-select
+    placeholder="End time..."
+    v-model="endTime"
+    :picker-options="{
+      start: '08:30',
+      step: '00:15',
+      end: '18:30',
+      minTime: startTime
+    }">
+  </el-time-select>
 </template>
 
 <script>
 export default {
   data () {
     return {
-
+      value1: '',
+      startTime: '',
+      endTime: ''
     };
   }
 }
@@ -875,15 +972,61 @@ export default {
 
 ### TimePicker Attributes
 
-| Attribute | Type | Default | Values | Description |
-| --------- |:----:|:-------:| ------ | ----------- |
-|
+| Attribute           | Type                                | Default                | Values            | Description                |
+| ------------------- |:-----------------------------------:|:----------------------:| ----------------- | -------------------------- |
+| `value/v-model`     | Date(TimePicker)/String(TimeSelect) | -                      | -                 | Binding Value              |
+| `readonly`          | Boolean                             | false                  | -                 | Readonly TimePicker        |
+| `disabled`          | Boolean                             | false                  | -                 | TimePicker Disabled        |
+| `editable`          | Boolean                             | true                   | -                 | Input Editable             |
+| `clearable`         | Boolean                             | true                   | -                 | Show Clear Button          |
+| `size`              | String                              | -                      | medium/small/mini | Input Size                 |
+| `placeholder`       | String                              | -                      | -                 | Placeholder (Non-range)    |
+| `start-placeholder` | String                              | -                      | -                 | Start Placeholder (range)  |
+| `end-placeholder`   | String                              | -                      | -                 | End Placeholder (range)    |
+| `is-range`          | Boolean                             | false                  | -                 | Pick Time Range            |
+| `arrow-control`     | Boolean                             | false                  | -                 | Pick Time using Arrow Keys |
+| `align`             | left/center/right                   | -                      | left              | Alignment                  |
+| `popper-class`      | String                              | -                      | -                 | Custom Class Name          |
+| `picker-options`    | Object                              | `{}`                   | -                 | Additional Options         |
+| `range-separator`   | String                              | `-`                    | -                 | Range Separator            |
+| `default-value`     | Date(TimePicker)/String(TimeSelect) | -                      | -                 | Default Date               |
+| `value-format`      | String                              | -                      | Date Formats      | TimePicker Formatting      |
+| `name`              | String                              | -                      | -                 | Name Native                |
+| `prefix-icon`       | String                              | `el-icon-time`         | -                 | Custom Prefix Icon         |
+| `clear-icon`        | String                              | `el-icon-circle-close` | -                 | Custom Clear Icon          |
+
+[TimePicker Date Formats](https://element.eleme.io/#/en-US/component/date-picker#date-formats)
 
 ### TimePicker Events
 
-| Event Name | Parameters | Description |
-| ---------- | ---------- | ----------- |
-|
+| Event Name | Parameters         | Description                 |
+| ---------- | ------------------ | --------------------------- |
+| `change`   | Binding Value      | Triggers when Confirmation  |
+| `blur`     | Component Instance | Triggers when Input Blurs   |
+| `focus`    | Component Instance | Triggers when Input Focuses |
+
+### TimePicker Methods
+
+| Method  | Parameters | Description           |
+| ------- | ---------- | --------------------- |
+| `focus` | -          | Focus Input Component |
+
+### TimePicker Options
+
+| Attribute | Type   | Default | Values | Description           |
+| --------- |:------:|:-------:| ------ | --------------------- |
+| `start`   | String | 09:00   | -      | Start Time            |
+| `end`     | String | 18:00   | -      | End Time              |
+| `step`    | String | 00:30   | -      | Time Step             |
+| `minTime` | String | 00:00   | -      | Minimum Accepted Time |
+| `maxTime` | String | -       | -      | Maximum Accepted Time |
+
+### TimePicker Select Options
+
+| Attribute         | Type         | Default  | Values                                         | Description           |
+| ----------------- |:------------:|:--------:| ---------------------------------------------- | --------------------- |
+| `selectableRange` | String/Array | -        | -                                              | Available Time Range  |
+| `format`          | String       | HH:mm:ss | hour `HH`, minute `mm`, second `ss`, AM/PM `A` | Format for TimePicker |
 
 ---
 
