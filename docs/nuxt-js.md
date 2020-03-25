@@ -2,7 +2,10 @@
 
 [Nuxt.js Official Site](https://nuxtjs.org)
 
+---
+
 ## Installation
+
 Create Nuxt.js Project
 ```bash
 $ npx create-nuxt-app <project-name>
@@ -12,6 +15,8 @@ Start Development Server
 ```bash
 $ npm run dev
 ```
+
+---
 
 ## Deployment
 Universal App (SSR)
@@ -23,6 +28,8 @@ Static App (SPA)
 ```bash
 $ npm run generate
 ```
+
+---
 
 ## Routing
 ```html
@@ -36,6 +43,10 @@ $ npm run generate
 <nuxt-link :to="{ params: { one: true } }">Link</nuxt-link>
 ```
 
+---
+
 ## Pages
+
+---
 
 ## Configuration

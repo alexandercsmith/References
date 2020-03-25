@@ -62,6 +62,8 @@ Usage: `<el-col>`
 | `hidden-lg-and-up`   | Hide when on large viewports and up     |
 | `hidden-xl-only`     | Hide when on extra large viewports only |
 
+---
+
 ## Layout Container
 
 [Element UI - Layout Container](https://element.eleme.io/#/en-US/component/container)
@@ -98,17 +100,25 @@ Usage: `<el-col>`
 | --------- |:------:|:-------:| ------ | -------------------- |
 | `height`  | String | 60px    | -      | Height of the Footer |
 
+---
+
 ## Color
 
 [Element UI - Color](https://element.eleme.io/#/en-US/component/color)
+
+---
 
 ## Typography
 
 [Element UI - Typography](https://element.eleme.io/#/en-US/component/typography)
 
+---
+
 ## Border
 
 [Element UI - Border](https://element.eleme.io/#/en-US/component/border)
+
+---
 
 ## Icon
 
@@ -116,9 +126,13 @@ Usage: `<el-col>`
 
 Usage: `el-icon-iconName`
 
+---
+
 ## Button
 
 [Element UI - Button](https://element.eleme.io/#/en-US/component/button)
+
+---
 
 Usage: `<el-button>`
 
@@ -134,6 +148,8 @@ Usage: `<el-button>`
 | `icon`        | String  | -       | -                                        | Icon ClassName     |
 | `autofocus`   | Boolean | false   | -                                        | Autofocus Action   |
 | `native-type` | String  | button  | button/submit/reset                      | Button Type Native |
+
+---
 
 ## Link
 

@@ -35,6 +35,8 @@ export default {
 | --------- |:----:|:-------:| ------ | ----------- |
 | `` |
 
+---
+
 ## Loading
 
 [Element UI - Loading](https://element.eleme.io/#/en-US/component/loading)
@@ -59,6 +61,8 @@ export default {
 | Attribute | Type | Default | Values | Description |
 | --------- |:----:|:-------:| ------ | ----------- |
 | `` |
+
+---
 
 ## Message
 
@@ -85,6 +89,8 @@ export default {
 | --------- |:----:|:-------:| ------ | ----------- |
 | `` |
 
+---
+
 ## MessageBox
 
 [Element UI - MessageBox](https://element.eleme.io/#/en-US/component/message-box)
@@ -109,6 +115,8 @@ export default {
 | Attribute | Type | Default | Values | Description |
 | --------- |:----:|:-------:| ------ | ----------- |
 | `` |
+
+---
 
 ## Notitication
 

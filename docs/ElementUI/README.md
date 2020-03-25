@@ -2,7 +2,17 @@
 
 [Element UI Documentation](https://element.eleme.io/#/en-US)
 
+* [General Components](../General.md)
+* [Form Components](../Form.md)
+* [Data Components](../Data.md)
+* [Navigation Components](../Navigation.md)
+* [Notice Components](../Notice.md)
+* [Misc Components](../Misc.md)
+
+---
+
 ## Installation
+
 NPM
 ```bash
 $ npm i element-ui -S
@@ -12,9 +22,12 @@ CDN
 ```html
 <!-- import CSS -->
 <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+
 <!-- import JavaScript -->
 <script src="https://unpkg.com/element-ui/lib/index.js"></script>
 ```
+
+---
 
 ## Import
 ```js
@@ -30,6 +43,8 @@ new Vue({
   render: h => h(App)
 });
 ```
+
+---
 
 ## Components
 ```js

@@ -71,6 +71,8 @@ export default {
 | ---------- | ----------------- | --------------------------------- |
 | `change`   | Radio Label Value | Triggers when Bound value changes |
 
+---
+
 ## RadioGroup
 
 [Element UI - RadioGroup](https://element.eleme.io/#/en-US/component/radio)
@@ -112,6 +114,8 @@ export default {
 | Event Name | Parameters        | Description                       |
 | ---------- | ----------------- | --------------------------------- |
 | `change`   | Radio Label Value | Triggers when Bound value changes |
+
+---
 
 ## Checkbox
 
@@ -167,6 +171,8 @@ export default {
 | ---------- | ------------- | ----------------------------------- |
 | `change`   | Updated Value | Triggers when Binding value changes |
 
+---
+
 ## CheckboxGroup
 
 [Element UI - Checkbox](https://element.eleme.io/#/en-US/component/checkbox)
@@ -211,6 +217,8 @@ export default {
 | Event Name | Parameters    | Description                         |
 | ---------- | ------------- | ----------------------------------- |
 | `change`   | Updated Value | Triggers when Binding value changes |
+
+---
 
 ## Input
 
@@ -366,6 +374,8 @@ export default {
 | ------- | ---------- | ------------------- |
 | `focus` | -          | Focus Input Element |
 
+---
+
 ## InputNumber
 
 [Element UI - InputNumber](https://element.eleme.io/#/en-US/component/input-number)
@@ -446,6 +456,8 @@ export default {
 | -------- | ---------- | -------------------------------- |
 | `focus`  | -          | Focus Input Component            |
 | `select` | -          | Select the Text in Input Element |
+
+---
 
 ## Select
 
@@ -582,6 +594,8 @@ export default {
 | `value`    | String/Number/Object | -       | -      | Value of option |
 | `label`    | String/Number        | -       | -      | Label of option |
 | `disabled` | Boolean              | false   | -      | Option disabled |
+
+---
 
 ## Cascader
 
@@ -737,6 +751,8 @@ export default {
 | `disabled`      | String                  | `disabled` | -           | Specify Key Node Object as Disabled            |
 | `leaf`          | String                  | `leaf`     | -           | Specify Key Node Object as Leaf Field          |
 
+---
+
 ## Switch
 
 [Element UI - Switch](https://element.eleme.io/#/en-US/component/switch)
@@ -799,6 +815,8 @@ export default {
 | ------- | ---------- | ---------------------- |
 | `focus` | -          | Focus Switch Component |
 
+---
+
 ## Slider
 
 [Element UI - Slider](https://element.eleme.io/#/en-US/component/slider)
@@ -831,6 +849,8 @@ export default {
 | Event Name | Parameters | Description |
 | ---------- | ---------- | ----------- |
 |
+
+---
 
 ## TimePicker
 
@@ -865,6 +885,8 @@ export default {
 | ---------- | ---------- | ----------- |
 |
 
+---
+
 ## DatePicker
 
 [Element UI - DatePicker](https://element.eleme.io/#/en-US/component/date-picker)
@@ -897,6 +919,8 @@ export default {
 | Event Name | Parameters | Description |
 | ---------- | ---------- | ----------- |
 |
+
+---
 
 ## DateTimePicker
 
@@ -931,6 +955,8 @@ export default {
 | ---------- | ---------- | ----------- |
 |
 
+---
+
 ## Upload
 
 [Element UI - Upload](https://element.eleme.io/#/en-US/component/upload)
@@ -963,6 +989,8 @@ export default {
 | Event Name | Parameters | Description |
 | ---------- | ---------- | ----------- |
 |
+
+---
 
 ## Rate
 
@@ -997,6 +1025,8 @@ export default {
 | ---------- | ---------- | ----------- |
 |
 
+---
+
 ## ColorPicker
 
 [Element UI - ColorPicker](https://element.eleme.io/#/en-US/component/color-picker)
@@ -1030,6 +1060,8 @@ export default {
 | ---------- | ---------- | ----------- |
 |
 
+---
+
 ## Transfer
 
 [Element UI - Transfer](https://element.eleme.io/#/en-US/component/transfer)
@@ -1062,6 +1094,8 @@ export default {
 | Event Name | Parameters | Description |
 | ---------- | ---------- | ----------- |
 |
+
+---
 
 ## Form
 

@@ -37,6 +37,8 @@ export default {
 | --------- |:----:|:-------:| ------ | ----------- |
 | `` |
 
+---
+
 ## Tag
 
 [Element UI - Tag](https://element.eleme.io/#/en-US/component/tag)
@@ -62,6 +64,8 @@ export default {
 | Attribute | Type | Default | Values | Description |
 | --------- |:----:|:-------:| ------ | ----------- |
 | `` |
+
+---
 
 ## Progress
 
@@ -89,6 +93,8 @@ export default {
 | --------- |:----:|:-------:| ------ | ----------- |
 | `` |
 
+---
+
 ## Tree
 
 [Element UI - Tree](https://element.eleme.io/#/en-US/component/tree)
@@ -115,6 +121,8 @@ export default {
 | --------- |:----:|:-------:| ------ | ----------- |
 | `` |
 
+---
+
 ## Pagination
 
 [Element UI - Pagination](https://element.eleme.io/#/en-US/component/pagination)
@@ -140,6 +148,8 @@ export default {
 | Attribute | Type | Default | Values | Description |
 | --------- |:----:|:-------:| ------ | ----------- |
 | `` |
+
+---
 
 ## Badge
 
