@@ -587,8 +587,54 @@ export default {
 
 [Element UI - Cascader](https://element.eleme.io/#/en-US/component/cascader)
 
+Usage: `<el-cascader>`
+
+***Cascader***
+```html
+<template>
+  <el-cascader
+    v-model="value"
+    :options="options"
+    @change="handleChange">
+  </el-cascader>
+</template>
+
+<script>
+export default {
+  data () {
+    return {
+      value: [],
+      options: [{
+        value: 'guide',
+        label: 'Guide',
+        children: [
+          {
+            value: 'disciplines',
+            label: 'Disciplines',
+            children: [
+              { value: 'consistency', label: 'Consistency' },
+              { value: 'feedback', label: 'Feedback' }
+            ]
+          },
+          {
+            value: 'navigation',
+            label: 'Navigation',
+            children: [
+              { value: 'side-nav', label: 'Side Navigation' },
+              { value: 'top-nav', label: 'Top Navigation' }
+            ]
+          }
+        ]
+      }]
+    };
+  }
+}
+</script>
+```
+
 Usage: `<el->`
 
+***CascaderPanel***
 ```html
 <template>
 </template>
@@ -606,21 +652,96 @@ export default {
 
 ### Cascader Attributes
 
-| Attribute | Type | Default | Values | Description |
-| --------- |:----:|:-------:| ------ | ----------- |
-|
+| Attribute         | Type                    | Default | Values            | Description                    |
+| ----------------- |:-----------------------:|:-------:| ----------------- | ------------------------------ |
+| `value/v-model`   | -                       | -       | -                 | Binding Value                  |
+| `options`         | Array                   | -       | -                 | Data of Options                |
+| `props`           | Object                  | -       | -                 | Configuration Options          |
+| `size`            | String                  | -       | medium/small/mini | Size of Input                  |
+| `placeholder`     | String                  | Select  | -                 | Placeholder Text               |
+| `disabled`        | Boolean                 | false   | -                 | Cascader disabled              |
+| `clearable`       | Boolean                 | false   | -                 | Clear Cascader                 |
+| `show-all-levels` | Boolean                 | true    | -                 | All Levels of Value            |
+| `collapse-tags`   | Boolean                 | false   | -                 | Collapse Tags in Multiple      |
+| `separator`       | String                  | '/'     | -                 | Option Label Separator         |
+| `filterable`      | Boolean                 | -       | -                 | Searchable Options             |
+| `filter-method`   | Function(node, keyword) | -       | -                 | Custom Function                |
+| `debounce`        | Number                  | 300     | -                 | Debounce delay                 |
+| `before-filter`   | Function(value)         | -       | -                 | Hook Function before Filtering |
+| `popper-class`    | String                  | -       | -                 | Custom Dropdown Class Name     |
 
 ### Cascader Events
 
-| Event Name | Parameters | Description |
-| ---------- | ---------- | ----------- |
-|
+| Event Name       | Parameters                   | Description                          |
+| ---------------- | ---------------------------- | ------------------------------------ |
+| `change`         | Value                        | Triggers when Binding value changes  |
+| `expand-change`  | Array of Parent Nodes        | Triggers when Expand option changes  |
+| `blur`           | (event: Event)               | Triggers when Cascader blurs         |
+| `focus`          | (event: Event)               | Triggers when Cascader focuses       |
+| `visible-change` | appear: true - hidden: false | Triggers when Dropdown Appears       |
+| `remove-tag`     | Value of removed Tag         | Triggers when Remove Tag in Multiple |
+
+### Cascader Slots
+
+| Name    | Description                                |
+| ------- | ------------------------------------------ |
+| `-`     | Custom Content. Parameter `{ node, data }` |
+| `empty` | Content when No Matching options           |
+
+### Cascader Methods
+| Method            | Parameters                | Description                |
+| ----------------- | ------------------------- | -------------------------- |
+| `getCheckedNodes` | (leafOnly) default: false | Get Array of Selected Node |
+
+### CascaderPanel Attributes
+
+| Attribute       | Type   | Default | Values | Description           |
+| --------------- |:------:|:-------:| ------ | --------------------- |
+| `value/v-model` | -      | -       | -      | Binding Value         |
+| `options`       | Array  | -       | -      | Data of Options       |
+| `props`         | Object | -       | -      | Configuration Options |
+
+### CascaderPanel Events
+
+| Event Name      | Parameters            | Description                         |
+| --------------- | --------------------- | ----------------------------------- |
+| `change`        | Value                 | Triggers when Binding value changes |
+| `expand-change` | Array of Parent Nodes | Triggers when Expand option changes |
+
+### CascaderPanel Slots
+
+| Name | Description                                 |
+| ---- | ------------------------------------------- |
+| `-`  | Custom Content. Parameters `{ node, data }` |
+
+### CascaderPanel Methods
+
+| Method              | Parameters                | Description                     |
+| ------------------- | ------------------------- | ------------------------------- |
+| `getCheckedNodes`   | (leafOnly) default: false | Array of current selected nodes |
+| `clearCheckedNodes` | -                         | Clear checked nodes             |
+
+### Props
+
+| Attribute       | Type                    | Default    | Values      | Description                                    |
+| --------------- |:-----------------------:|:----------:| ----------- | ---------------------------------------------- |
+| `expandTrigger` | String                  | `click`    | click/hover | Trigger Expanded Options                       |
+| `multiple`      | Boolean                 | false      | -           | Multiple Select Enabled                        |
+| `checkStrictly` | Boolean                 | false      | -           | Checked State does not affect Parents/Children |
+| `emitPath`      | Boolean                 | true       | -           | Emit -> Array: true / Value: false             |
+| `lazy`          | Boolean                 | false      | -           | Dynamic Load Child Nodes                       |
+| `lazyLoad`      | Function(node, resolve) | -          | -           | Loading Child Nodes                            |
+| `value`         | String                  | `value`    | -           | Specify Key Node Object as Value               |
+| `label`         | String                  | `label`    | -           | Specify Key Node Object as Label               |
+| `children`      | String                  | `children` | -           | Specify Key Node Object as Children            |
+| `disabled`      | String                  | `disabled` | -           | Specify Key Node Object as Disabled            |
+| `leaf`          | String                  | `leaf`     | -           | Specify Key Node Object as Leaf Field          |
 
 ## Switch
 
 [Element UI - Switch](https://element.eleme.io/#/en-US/component/switch)
 
-Usage: `<el->`
+Usage: `<el-switch>`
 
 ```html
 <template>
