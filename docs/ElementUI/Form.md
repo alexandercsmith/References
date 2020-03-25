@@ -2,6 +2,27 @@
 
 [Element UI Documentation](https://element.eleme.io/#/en-US)
 
+* Radio
+* RadioGroup
+* Checkbox
+* CheckboxGroup
+* Input
+* InputNumber
+* Select
+* Cascader
+* Switch
+* Slider
+* TimePicker
+* DatePicker
+* DateTimePicker
+* Upload
+* Rate
+* ColorPicker
+* Transfer
+* Form
+
+---
+
 ## Radio
 
 [Element UI - Radio](https://element.eleme.io/#/en-US/component/radio)

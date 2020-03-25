@@ -2,6 +2,17 @@
 
 [Element UI Documentation](https://element.eleme.io/#/en-US)
 
+* Layout
+* Layout Container
+* Color
+* Typography
+* Border
+* Icon
+* Button
+* Link
+
+---
+
 ## Layout
 
 [Element UI - Layout](https://element.eleme.io/#/en-US/component/layout)

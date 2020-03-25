@@ -2,6 +2,15 @@
 
 [Element UI Documentation](https://element.eleme.io/#/en-US)
 
+* Table
+* Tag
+* Progress
+* Tree
+* Pagination
+* Badge
+
+---
+
 ## Table
 
 [Element UI - Table](https://element.eleme.io/#/en-US/component/table)

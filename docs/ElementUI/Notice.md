@@ -2,26 +2,13 @@
 
 [Element UI Documentation](https://element.eleme.io/#/en-US)
 
-Usage: `<el->`
+* Alert
+* Loading
+* Message
+* MessageBox
+* Notification
 
-```html
-<template>
-</template>
-
-<script>
-export default {
-  data () {
-    return {};
-  }
-}
-</script>
-```
-
-### Attributes
-
-| Attribute | Type | Default | Values | Description |
-| --------- |:----:|:-------:| ------ | ----------- |
-| `` |
+---
 
 ## Alert
 
