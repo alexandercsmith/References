@@ -523,33 +523,44 @@ export default {
 
 ### Select Events
 
-| Event Name | Parameters | Description |
-| ---------- | ---------- | ----------- |
-| ``
+| Event Name      | Parameters                   | Description                    |
+| --------------- | ---------------------------- | ------------------------------ |
+| `change`        | Selected Value               | Triggers when Value changes    |
+| `visble-change` | Appear: true - Hidden: false | Triggers when Dropdown Appears |
+| `remove-tag`    | Removed Tag Value            | Triggers when Tag removed      |
+| `clear`         | -                            | Triggers when Clear clicked    |
+| `blur`          | (event: Event)               | Triggers when Input blurs      |
+| `focus`         | (event: Event)               | Triggers when Input Focuses    |
 
 ### Select Slots
 
-| Name | Description |
-| ---- | ----------- |
-| ``
+| Name     | Description              |
+| -------- | ------------------------ |
+| `-`      | Option component list    |
+| `prefix` | Content as Select prefix |
+| `empty`  | Content when No Options  |
 
 ### Select Methods
 
-| Method | Parameters | Description |
-| ------ | ---------- | ----------- |
-| ``
+| Method  | Parameters | Description           |
+| ------- | ---------- | --------------------- |
+| `focus` | -          | Focus Input Component |
+| `blur`  | -          | Blur Input Component  |
 
 ### Option Group Attributes
 
-| Attribute | Type | Default | Values | Description |
-| --------- |:----:|:-------:| ------ | ----------- |
-| ``
+| Attribute  | Type    | Default | Values | Description         |
+| ---------- |:-------:|:-------:| ------ | ------------------- |
+| `label`    | String  | -       | -      | Name of Group       |
+| `disabled` | Boolean | false   | -      | Disable all options |
 
 ### Option Attributes
 
-| Attribute | Type | Default | Values | Description |
-| --------- |:----:|:-------:| ------ | ----------- |
-| ``
+| Attribute  | Type                 | Default | Values | Description     |
+| ---------- |:--------------------:|:-------:| ------ | --------------- |
+| `value`    | String/Number/Object | -       | -      | Value of option |
+| `label`    | String/Number        | -       | -      | Label of option |
+| `disabled` | Boolean              | false   | -      | Option disabled |
 
 ## Cascader
 
