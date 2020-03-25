@@ -745,13 +745,24 @@ Usage: `<el-switch>`
 
 ```html
 <template>
+  <el-switch
+    v-model="value1">
+  </el-switch>
+
+  <!-- Active : Inactive -->
+  <el-switch
+    v-model="value2"
+    active-color="#12ce66"
+    inactive-color="#ff4949">
+  </el-switch>
 </template>
 
 <script>
 export default {
   data () {
     return {
-
+      value1: true,
+      value2: true
     };
   }
 }
@@ -760,15 +771,33 @@ export default {
 
 ### Switch Attributes
 
-| Attribute | Type | Default | Values | Description |
-| --------- |:----:|:-------:| ------ | ----------- |
-|
+| Attribute             | Type                  | Default | Values | Description                 |
+| --------------------- |:---------------------:|:-------:| ------ | --------------------------- |
+| `value/v-model`       | Boolean/String/Number | -       | -      | Binding Value               |
+| `disabled`            | Boolean               | false   | -      | Switch disabled             |
+| `width`               | Number                | 40      | -      | Switch width                |
+| `active-icon-class`   | String                | -       | -      | Icon Class when `on`        |
+| `inactive-icon-class` | String                | -       | -      | Icon Class when `off`       |
+| `active-text`         | String                | -       | -      | Text displayed when `on`    |
+| `inactive-text`       | String                | -       | -      | Text displayed when `off`   |
+| `active-value`        | Boolean/String/Number | true    | -      | Switch value when `on`      |
+| `inactive-value`      | Boolean/String/Number | false   | -      | Switch value when `off`     |
+| `active-color`        | String                | #409eff | -      | Background color when `on`  |
+| `inactice-color`      | String                | #c0ccda | -      | Background color when `off` |
+| `name`                | String                | -       | -      | Input name of Switch        |
+| `validate-event`      | Boolean               | true    | -      | Trigger Form Validation     |
 
 ### Switch Events
 
-| Event Name | Parameters | Description |
-| ---------- | ---------- | ----------- |
-|
+| Event Name | Parameters           | Description                 |
+| ---------- | -------------------- | --------------------------- |
+| `change`   | Value after changing | Triggers when value changes |
+
+### Switch Methods
+
+| Method  | Parameters | Description            |
+| ------- | ---------- | ---------------------- |
+| `focus` | -          | Focus Switch Component |
 
 ## Slider
 
