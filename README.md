@@ -1,6 +1,6 @@
 # References
 
-> Programming Reference Docs
+> Programming Templates, Development Notes, Framework Documentation and Code References.
 
 ## Directory
 * [AWS SDK](./docs/AWS-SDK)

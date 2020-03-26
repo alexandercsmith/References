@@ -1034,17 +1034,56 @@ export default {
 
 [Element UI - DatePicker](https://element.eleme.io/#/en-US/component/date-picker)
 
-Usage: `<el->`
+Usage: `<el-date-picker>`
 
 ```html
 <template>
+  <el-date-picker
+    v-model="value1"
+    type="date"
+    placeholder="Pick a Date...">
+  </el-date-picker>
+
+  <!-- Picker w. Options -->
+  <el-date-picker
+    v-model="value2"
+    type="date"
+    placeholder="Pick a Date..."
+    :picker-options="pickerOptions">
+  </el-date-picker>
 </template>
 
 <script>
 export default {
   data () {
     return {
-
+      value1: '',
+      value2: '',
+      pickerOptions: {
+        disabledDate(time) { return time.getTime() > Date.now(); },
+        shortcuts: [
+          {
+            text: 'Today',
+            onClick(picker) { picker.$emit('pick', new Date()); }
+          },
+          {
+            text: 'Yesterday',
+            onClick(picker) {
+              const date = new Date();
+              date.setTime(date.getTime() - 3600 * 1000 * 24);
+              picker.$emit('pick', date);
+            }
+          },
+          {
+            text: 'A Week Ago',
+            onClick(picker) {
+              const date = new Date();
+              date.setTime(date.getTime() - 3600 * 1000 * 24 * 7);
+              picker.$emit('pick', date);
+            }
+          }
+        ]
+      }
     };
   }
 }
@@ -1053,15 +1092,87 @@ export default {
 
 ### DatePicker Attributes
 
-| Attribute | Type | Default | Values | Description |
-| --------- |:----:|:-------:| ------ | ----------- |
-|
+| Attribute           | Type                                    | Default                | Values                         | Description |
+| ------------------- |:---------------------------------------:|:----------------------:| ------------------------------ | ----------- |
+| `value/v-model`     | Date(DatePicker)/Array(DateRangePicker) | -                      | -                              |
+| `readonly`          | Boolean                                 | false                  | -                              |
+| `disabled`          | Boolean                                 | false                  | -                              |
+| `size`              | String                                  | -                      | large/small/mini               |
+| `editable`          | Boolean                                 | true                   | -                              |
+| `clearable`         | Boolean                                 | true                   | -                              |
+| `placeholder`       | String                                  | -                      | -                              |
+| `start-placeholder` | String                                  | -                      | -                              |
+| `end-placeholder`   | String                                  | -                      | -                              |
+| `type`              | String                                  | Date                   | Date Types                     |
+| `format`            | String                                  | yyyy-MM-dd             | Date Formats                   |
+| `align`             | left/center/right                       | -                      | left                           |
+| `popper-class`      | String                                  | -                      | -                              |
+| `picker-options`    | Object                                  | `{}`                   | -                              |
+| `range-separator`   | String                                  | `-`                    | -                              |
+| `default-value`     | Date                                    | -                      | Any accepted by `new Date()`   |
+| `default-time`      | String[]                                | -                      | Array ['hh-mm-ss', 'hh-mm-ss'] |
+| `value-format`      | String                                  | -                      | Date Formats                   |
+| `name`              | String                                  | -                      | -                              |
+| `unlink-panels`     | Boolean                                 | false                  | -                              |
+| `prefix-icon`       | String                                  | `el-icon-date`         | -                              |
+| `clear-icon`        | String                                  | `el-icon-circle-close` | -                              |
+| `validate-event`    | Boolean                                 | true                   | -                              |
 
 ### DatePicker Events
 
 | Event Name | Parameters | Description |
 | ---------- | ---------- | ----------- |
 |
+
+### DatePicker Slots
+
+| Name | Description                                 |
+| ---- | ------------------------------------------- |
+| `-`  | Custom Content. Parameters `{ node, data }` |
+
+### DatePicker Methods
+
+| Method | Parameters | Description |
+| ------ | ---------- | ----------- |
+|
+
+### DatePicker Options
+
+| Attribute | Type | Default | Values | Description |
+| --------- |:----:|:-------:| ------ | ----------- |
+|
+
+### DatePicker Shortcuts
+
+| Attribute | Type | Default | Values | Description |
+| --------- |:----:|:-------:| ------ | ----------- |
+|
+
+
+### Date Formats
+| Format      | Label                | Example       | Description                                            |
+|:-----------:|:--------------------:| ------------- | ------------------------------------------------------ |
+| `yyyy`      | Year                 | 2017          | -                                                      |
+| `M`         | Month                | 1             | No leading `0`                                         |
+| `MM`        | Month                | 01            | -                                                      |
+| `MMM`       | Month                | Jan           | -                                                      |
+| `MMMM`      | Month                | January       | -                                                      |
+| `W`         | Week                 | 1             | Week Picker - No leading `0`                           |
+| `WW`        | Week                 | 01            | Week Picker                                            |
+| `d`         | Day                  | 2             | No leading `0`                                         |
+| `dd`        | Day                  | 02            | -                                                      |
+| `H`         | Hour                 | 3             | 24-hr Clock - No leading `0`                           |
+| `HH`        | Hour                 | 03            | 24-hr Clock                                            |
+| `h`         | Hour                 | 3             | 12-hr Clock - No leading `0` - Must include `A` or `a` |
+| `hh`        | Hour                 | 03            | 12-hr Clock - Must include `A` or `a`                  |
+| `m`         | Minute               | 4             | No leading `0`                                         |
+| `mm`        | Minute               | 04            | -                                                      |
+| `s`         | Second               | 5             | No leading `0`                                         |
+| `ss`        | Second               | 05            | -                                                      |
+| `A`         | AM/PM                | AM            | Uppercase                                              |
+| `a`         | am/pm                | am            | Lowercase                                              |
+| `timestamp` | JS Timestamp         | 1483326245000 | `value-format`                                         |
+| `[MM]`      | No escape characters | MM            | Escape Characters - Wrap in `[A]` Brackets             |
 
 ---
 
