@@ -66,6 +66,19 @@ Host *
     IdentityFile ~/.ssh/custom_id_rsa
 ```
 
+## Add SSH to SSH-Agent
+
+Start `ssh-agent` in background
+```bash
+$ eval "$(ssh-agent -s)"
+> Agent pid 59555
+```
+
+Add SSH Key to SSH-Agent
+```bash
+$ ssh-add -K ~/.ssh/custom_key
+```
+
 ## Add SSH Keys to GitHub
 
 * Navigate to `SSh and GPG Keys` in GitHub Settings
