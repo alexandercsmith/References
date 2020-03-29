@@ -72,9 +72,34 @@
 ## Core Concepts
 
 ### Ledger Structure
+* QLDB data is organized into Tables of `Amazon Ion` documents.
+* Tables are collections of `Document Revisions`.
+* A `Document Revision` represents a single iteration of the Documents full dataset.
+* Amazon QLDB stores the complete change history of your data.
+* __Documents__ -> `Document Revision`
 
 ### Write Transactions
+* Modification of QLDB Document data requires a Database Transaction.
+* Transaction: Data is read from Ledger, Updated, and Committed to the `Journal`
+* The `Journal` represents the complete immutable history of all data changes.
+* QLDB writes one or more chained `Blocks` to the `Journal` in a transaction.
+* Each `Block` contains `Entry` objects to represent `Document Revisions` to Insert, Update and Delete, along with `PartiQL` statements to commit.
+* Each `Block` is hashed and chained to subsequent `Blocks` for verification.
+* A `Strand` is a partition of your ledger's `Journal`. QLDB supports `Journals` with a single `Strand` only.
 
 ### Querying your Data
+* Amazon QLDB addresses high-performance online transaction processing workloads. (`OLTP`)
+* A Ledger provides queryable views of data based on transaction information committed to the `Journal`.
+* A `View` in QLDB is a projection of data in a Table.
+* Query `Views` using **PartiQL** `SELECT` statements.
+  * **User**: The latest non-deleted revision of Application-defined data. [Default]
+  * **Committed**: The latest non-deleted revision of both data and system-generated metadata.
+* `History Function` returns both data and associated metadata in the same schema as the `Committed View`.
 
 ### Data Storage
+* `Journal Storage`
+  * The disk space that is used by a Ledger's `Journal`.
+  * `Journals` are append-only and contain the complete, immutable, and verifiable history of changes.
+* `Indexed Storage`
+  * The disk space that is used by  a Ledger's `Tables`, `Indexes`, and `Indexed History`.
+  * `Indexed Storage` consists of Ledger data that is optimized for high-performace queries.
