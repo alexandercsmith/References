@@ -66,3 +66,15 @@
 | Query Metadata         | No built-in metadata                            | `SELECT` querying from built-in committed view of Table                            |
 | Query Revision History | No built-in metadata                            | `SELECT` querying from built-in history function                                   |
 | Cryptographic Verify   | No built-in cryptography or immutability        | APIs returning digest of `Journal` and verified proof of Integrity                 |
+
+---
+
+## Core Concepts
+
+### Ledger Structure
+
+### Write Transactions
+
+### Querying your Data
+
+### Data Storage
