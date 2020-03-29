@@ -18,3 +18,4 @@
   * [Vue.js](./docs/Frameworks/vue-js.md)
   * [Serverless Framework](./docs/Frameworks/serverless-js.md)
   * [Ruby on Rails](./docs/Frameworks/rubyonrails-rb.md)
+* [Guides](./docs/Guides)
