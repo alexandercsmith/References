@@ -56,3 +56,17 @@ $ gpg --armor --export <ID>
 * Copy GPG Key
   * Beginning: `-----BEGIN PGP PUBLIC KEY BLOCK-----`
   * Ending: `-----END PGP PUBLIC KEY BLOCK-----`
+
+* Add GPG Key to GitHub
+
+## Add GPG Key to System Git
+
+Get GPG Key ID
+```bash
+$ gpg --list-secret-keys --keyid-format LONG
+```
+
+Add to Git Global Config
+```bash
+$ git config --global user.signingkey <GPG_ID>
+```
