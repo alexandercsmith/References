@@ -20,6 +20,14 @@
 $ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 ```
 
+### Git
+
+[git-scm.com](https://git-scm.com/)
+
+```bash
+$ brew install git
+```
+
 ### ZSH
 
 [ohmyz.sh](https://ohmyz.sh/)
@@ -34,14 +42,6 @@ $ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/instal
 
 ```bash
 $ brew install node
-```
-
-### Git
-
-[git-scm.com](https://git-scm.com/)
-
-```bash
-$ brew install git
 ```
 
 ### Yarn
