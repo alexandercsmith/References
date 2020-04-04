@@ -126,6 +126,10 @@
   * [IndexedDB](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API)
   * [GraphQL](https://graphql.org/)
   * [JSDoc](https://jsdoc.app/)
+  * [Lodash](https://lodash.com/) - JavaScript Utility Library
+  * [Commander.js](https://github.com/tj/commander.js#readme) - Node.js Command-line Interface
+  * [Inquirer.js](https://github.com/SBoudrias/Inquirer.js) - Node.js Command-line Interface
+  * [Moment.js](https://momentjs.com/) - Node.js Date & Time Formatter
 
 ## Tools
   * [Homebrew](https://brew.sh/)
@@ -135,6 +139,6 @@
   * [React.js DevTools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi)
   * [Google Tag Manager](https://tagmanager.google.com/)
   * [Google Analytics](https://analytics.google.com/analytics/web/)
-  * [Sentry Tracking](https://sentry.io/welcome/)
-  * [Postico](https://eggerapps.at/postico/)
-  * [Postman](https://www.postman.com/)
+  * [Sentry](https://sentry.io/welcome/) - Error Tracking
+  * [Postico](https://eggerapps.at/postico/) - PostgreSQL Client
+  * [Postman](https://www.postman.com/) - HTTP Testing Client
