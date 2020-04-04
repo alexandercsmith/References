@@ -129,9 +129,12 @@
 
 ## Tools
   * [Homebrew](https://brew.sh/)
+  * [Zsh](https://ohmyz.sh/)
   * [ESLint](https://eslint.org/)
   * [Vue.js DevTools](https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd/)
   * [React.js DevTools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi)
   * [Google Tag Manager](https://tagmanager.google.com/)
   * [Google Analytics](https://analytics.google.com/analytics/web/)
   * [Sentry Tracking](https://sentry.io/welcome/)
+  * [Postico](https://eggerapps.at/postico/)
+  * [Postman](https://www.postman.com/)
