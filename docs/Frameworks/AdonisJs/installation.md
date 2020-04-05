@@ -20,6 +20,7 @@ $ npm install -g @adonisjs/cli
 $ adonis new <app-name>
 ```
 ### Start Development Server
+  * `localhost:3333`
 ```bash
 $ adonis serve --dev
 ```
