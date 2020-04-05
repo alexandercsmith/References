@@ -19,12 +19,11 @@
   * [AWS QLDB](./docs/DB/QLDB)
 
 ### [Frameworks](./docs/Frameworks)
+  * [AdonisJs](./docs/Frameworks/AdonisJs)
   * [ElementUI](./docs/Frameworks/ElementUI)
-  * [Express.js](./docs/Frameworks/express-js.md)
-  * [Nuxt.js](./docs/Frameworks/nuxt-js.md)
-  * [Vue.js](./docs/Frameworks/vue-js.md)
-  * [Serverless Framework](./docs/Frameworks/serverless-js.md)
-  * [Ruby on Rails](./docs/Frameworks/rubyonrails-rb.md)
+  * [Nuxt.js](./docs/Frameworks/NuxtJs)
+  * [Serverless Framework](./docs/Frameworks/Serverless)
+  * [Vue.js](./docs/Frameworks/VueJs)
 
 ### [Guides](./docs/Guides)
   * [GitHub GPG](./docs/Guides/github-gpg.md)
